@@ -1,0 +1,30 @@
+Project Overview: Text Preprocessing and Plagiarism Detection
+This project focuses on text preprocessing and plagiarism detection using various techniques, including natural language processing (NLP) and the Rabin-Karp algorithm. Below is an overview of the project's main components and functionality.
+
+1. Text Preprocessing
+The preprocess function is designed to prepare text data for further analysis. It performs the following steps:
+
+Reading the File: Opens and reads the text file.
+Tokenization: Splits the text into sentences and words using NLTK's sent_tokenize and word_tokenize functions.
+Stopwords and Punctuation Removal: Removes common stopwords and punctuation marks from the text.
+Stemming: Applies Porter stemming to reduce words to their base or root form.
+Sentence Cleaning: Converts sentences to lowercase and removes punctuation.
+This function returns the preprocessed sentences or a concatenated string of stemmed words and their average length, depending on the req parameter.
+
+2. Rabin-Karp Algorithm for Plagiarism Detection
+The Rabin-Karp algorithm is used to detect plagiarism by finding matching substrings between two texts. It uses rolling hash techniques to efficiently search for patterns.
+
+RollingHash Class: Manages the rolling hash computation for a given text and window size.
+rabin_karp Function: Searches for a specific word within a larger text using the Rabin-Karp algorithm.
+rabin_karp2 Function: Computes the rolling hash values for k-grams (substrings of length k) of a given text.
+3. Plagiarism Detection
+The kgram function compares two preprocessed texts by calculating the similarity of their k-grams.
+
+kgram Function: Preprocesses two text files, computes their k-gram hash tables, and calculates the percentage of matching k-grams.
+main Function: Integrates the preprocessing and Rabin-Karp algorithm to measure the percentage of plagiarism both by sentence matching and k-gram matching. It also measures the runtime for each method.
+Usage
+Run the main function:
+The user is prompted to enter two filenames for comparison.
+The preprocess function processes the first file into sentences and the second file into a single cleaned string.
+The Rabin-Karp algorithm is used to detect matching sentences and k-grams.
+The percentage of plagiarism is calculated and displayed along with the runtime for each method.
