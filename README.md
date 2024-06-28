@@ -3,6 +3,7 @@ This project focuses on text preprocessing and plagiarism detection using variou
 1. Text Preprocessing
 2. Rabin-Karp Algorithm for Plagiarism Detection
 The Rabin-Karp algorithm is used to detect plagiarism by finding matching substrings between two texts. It uses rolling hash techniques to efficiently search for patterns.
+
  Plagiarism Detection
 The kgram function compares two preprocessed texts by calculating the similarity of their k-grams.
 
